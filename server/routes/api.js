@@ -9,7 +9,7 @@ router.put(
     "/boards/updateListsOrder",
     boardService.updateListsOrder.bind(boardService)
   )
-router.put("/boards/:boardId", boardService.update.bind(boardService))
-router.post("/lists", listService.create.bind(listService))
+// router.put("/boards/:boardId", boardService.update.bind(boardService))
+// router.post("/lists", listService.create.bind(listService))
 
 module.exports = router
