@@ -6,22 +6,7 @@ module.exports = {
             this._handleResponse(err, boards, res)
         })
     },
-    getById (req, res) {
-        Board.findOne({_id: req.params.boardId})
-            .populate({
-                path: "lists",
-                select: ["title"],
-                model: "List",
-                populate: {
-                    path: "cards",
-                    select: ["title", "body"],
-                    model: "Card"
-                }
-            })
-            .exec((err, board) => {
-                this._handleResponse(err, board, res)
-            })
-    },
+   
     update (req, res) {
         Board.findByIdAndUpdate(req.params.boardId, {title: req.body.title}, (err, board) => {
             this._handleResponse(err, board, res)
