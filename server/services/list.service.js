@@ -12,14 +12,14 @@ module.exports = {
                 return this._handleResponse("Error", null, res)
             }
 
-    //         List.create({title: req.body.title}, (err, card) => {
-    //             board.lists.push(card._id)
-    //             board.save(() => {
-    //                 this._handleResponse(err, card, res)
-    //             })
-    //         })
-    //     })
-    // },
+            List.create({title: req.body.title}, (err, card) => {
+                board.lists.push(card._id)
+                board.save(() => {
+                    this._handleResponse(err, card, res)
+                })
+            })
+        })
+    },
     _handleResponse (err, data, res) {
         if (err) {
             res.status(400).end()
