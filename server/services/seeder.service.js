@@ -49,7 +49,11 @@ module.exports = {
             })
         })
     },
-  
+    createCardsForLists (lists) {
+        lists.forEach((list) => {
+            this.createCards(list)
+        })
+    },
     createCards (list) {
         let cards = [];
 
