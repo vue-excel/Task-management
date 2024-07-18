@@ -68,22 +68,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.comments-list {
-  padding: 10px;
-}
-.single-thread {
-  background-color: #ffffff;
-  text-align: left;
-  padding: 10px;
-}
-.thread-content {
-  h2 {
-    margin-top: 0;
-  }
-}
-.load-more-comments-link {
-  cursor: pointer;
-}
-</style>
